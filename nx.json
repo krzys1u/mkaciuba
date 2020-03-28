@@ -1,0 +1,28 @@
+{
+  "npmScope": "mkaciuba",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "photos": {
+      "tags": []
+    },
+    "photos-e2e": {
+      "tags": [],
+      "implicitDependencies": ["photos"]
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    }
+  }
+}
