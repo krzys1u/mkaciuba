@@ -23,6 +23,12 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "image": {
+      "tags": []
+    },
+    "photos-ssr": {
+      "tags": []
     }
   }
 }

@@ -192,6 +192,91 @@
           }
         }
       }
+    },
+    "image": {
+      "root": "libs/image",
+      "sourceRoot": "libs/image/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/image/.eslintrc",
+            "tsConfig": [
+              "libs/image/tsconfig.lib.json",
+              "libs/image/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/image/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/image/jest.config.js",
+            "tsConfig": "libs/image/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "photos-ssr": {
+      "root": "apps/photos-ssr",
+      "sourceRoot": "apps/photos-ssr/src",
+      "projectType": "application",
+      "prefix": "photos-ssr",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/photos-ssr",
+            "main": "apps/photos-ssr/src/main.ts",
+            "tsConfig": "apps/photos-ssr/tsconfig.app.json",
+            "assets": ["apps/photos-ssr/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/photos-ssr/src/environments/environment.ts",
+                  "with": "apps/photos-ssr/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "photos-ssr:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/photos-ssr/.eslintrc",
+            "tsConfig": [
+              "apps/photos-ssr/tsconfig.app.json",
+              "apps/photos-ssr/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/photos-ssr/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/photos-ssr/jest.config.js",
+            "tsConfig": "apps/photos-ssr/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

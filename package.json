@@ -31,7 +31,14 @@
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "styled-components": "5.0.1",
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "4.9.1"
   },
   "devDependencies": {
     "@nrwl/workspace": "9.1.4",
