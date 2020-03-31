@@ -9,7 +9,6 @@ import Col from 'react-bootstrap/Col'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-
 const useStyles = makeStyles(theme => ({
   toolbar: { borderBottom: `1px solid ${theme.palette.divider}`,
      },
