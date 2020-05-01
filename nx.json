@@ -30,6 +30,16 @@
     "photos-ssr": {
       "tags": [],
       "implicitDependencies": ["photos"]
+    },
+    "photos-graphql": {
+      "tags": []
+    },
+    "photos-admin": {
+      "tags": []
+    },
+    "photos-admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["photos-admin"]
     }
   }
 }

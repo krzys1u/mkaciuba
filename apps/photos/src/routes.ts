@@ -1,7 +1,8 @@
 import App from './app/app';
+import Home from './app/Home'
 export const Routes = [
     {
-        component: App,
+        component: Home,
         path: '/',
         exact: true
     }

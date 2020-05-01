@@ -45,6 +45,9 @@ const useStyles = makeStyles(theme => ({
   },
   socialIconsItems: {
     marginTop: '5px'
+  },
+  menuDropdown: {
+    textAlign: 'center'
   }
 }))
   
@@ -116,8 +119,7 @@ export default function Header(props: HeaderProps)  {
                         } else {
                           return (<NavDropdown key={id} title={item.name} id="collasible-nav-dropdown">
                             {item.children.map(child =>
-                              <NavDropdown.Item href={child.url}>{child.name}</NavDropdown.Item>
-
+                              <NavDropdown.Item  href={child.url}>{child.name}</NavDropdown.Item>
                             )}
                           </NavDropdown>)
                         }
