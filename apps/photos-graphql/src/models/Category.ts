@@ -24,13 +24,17 @@ export class Category extends BaseEntity {
 
   @Field()
   @JoinTable()
-  @OneToMany('Media','image')
-  image: Media;
+  @OneToMany('Media','image', {
+    nullable: true
+  })
+  image?: Media;
 
   @Field()
   @JoinTable()
-  @OneToMany('Media','file')
-  file: Media
+  @OneToMany('Media','file', {
+    nullable: true
+  })
+  file?: Media
 
   @OneToMany(() => CategoryHasMedia, chm => chm.media)
   medias: Promise<CategoryHasMedia[]>

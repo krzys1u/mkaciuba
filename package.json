@@ -24,7 +24,7 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "start-photos": "nx run-many --target=serve --projects=photos,photos-ssr --parallel"
+    "start-photos": "nx run-many --target=serve --projects=photos,photos-ssr,photos-admin,api --parallel"
   },
   "private": true,
   "dependencies": {
@@ -32,11 +32,15 @@
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.9",
-    "@material-ui/core": "latest",
+    "@material-ui/core": "^4.9.12",
     "@material-ui/icons": "4.9.1",
     "apollo-server": "^2.12.0",
     "document-register-element": "1.13.1",
     "express": "4.17.1",
+    "get-graphql-schema": "^2.1.2",
+    "graphql": "^15.0.0",
+    "ra-data-graphql": "^3.4.3",
+    "ra-data-graphql-simple": "^3.4.3",
     "react": "16.12.0",
     "react-admin": "^3.4.2",
     "react-bootstrap": "^1.0.0-beta.16",
@@ -50,7 +54,7 @@
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^4.1.1",
     "styled-components": "5.0.1",
-    "type-graphql": "^0.17.6",
+    "type-graphql": "1.0.0-rc.2",
     "typeorm": "^0.2.24"
   },
   "devDependencies": {
@@ -85,6 +89,15 @@
     "ts-jest": "24.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~6.0.0",
-    "typescript": "~3.7.4"
+    "typescript": "~3.7.4",
+    "graphql-cli": "4.0.1-beta.6",
+    "@test-graphql-cli/coverage": "4.0.1-beta.6",
+    "@test-graphql-cli/validate": "4.0.1-beta.6",
+    "@test-graphql-cli/diff": "4.0.1-beta.6",
+    "@test-graphql-cli/serve": "4.0.1-beta.6",
+    "@test-graphql-cli/similar": "4.0.1-beta.6"
+  },
+  "author": {
+    "name": "Marcin Kaciuba"
   }
 }
